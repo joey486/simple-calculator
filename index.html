@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <link rel="icon" href="images/pi.png">
+        <meta charset="UTF-8">
+        <mata name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>     
+       <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body style="background-color: black;">
+
+        <video autoplay muted loop id="myVideo">
+            <source src="videos/ambiant red.mp4">
+        </video>
+
+        <div class="cursor-dot" data-cursor-dot></div>
+        <div class="cursor-outline" data-cursor-outline></div>
+
+        <div id="calculator">
+            <input id="display" readonly>
+            <div id="keys">
+
+                <!--numbers & simple functions-->
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>              
+                <button onclick="appendToDisplay('* Math.PI/180')" class="operator-btn">°</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay(' ')"></buttn>             
+                <button onclick="appendToDisplay('*')" class="operator-btn">×</button>             
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('0')">0</button>      
+                <button onclick="appendToDisplay('/')" class="operator-btn">÷</button>
+                <button onclick="appendToDisplay('.')" class="operator-btn">.</button>             
+                <button onclick="calculate()" class="operator-btn">=</button>               
+                <button onclick="clearDisplay()"  class="operator-btn">C</button>        
+                <button onclick="backspace()" class="operator-btn">←</button>
+
+                <!--advanced functions-->
+                <!--works-->               
+                <button onclick="appendToDisplay('(')" class="advanced-operator-btn">(</button>
+                <button onclick="appendToDisplay(')')" class="advanced-operator-btn">)</button>
+                <button onclick="appendToDisplay('**')" class="advanced-operator-btn">^</button>                  
+                <button onclick="appendToDisplay('Math.sin')" class="advanced-operator-btn">sin</button>
+                <button onclick="appendToDisplay('Math.cos')" class="advanced-operator-btn">cos</button>
+                <button onclick="appendToDisplay('Math.tan')" class="advanced-operator-btn">tan</button>                   
+                <button onclick="appendToDisplay('Math.PI')" class="advanced-operator-btn">π</button>
+                <button onclick="appendToDisplay('Math.E')" class="advanced-operator-btn">e</button>                    
+                <button onclick="appendToDisplay('Math.sqrt')" class="advanced-operator-btn">√</button>
+                <button onclick="appendToDisplay('Math.log')" class="advanced-operator-btn">ln</button>  
+                
+                <!--does not work-->
+                <!--
+                <button onclick="appendToDisplay('!')" class="advanced-operator-btn">!</button>
+                <button onclick="appendToDisplay('%')" class="advanced-operator-btn">%</button>
+                -->
+                
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
